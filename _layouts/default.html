@@ -11,7 +11,7 @@
     <meta name="theme-color" content="{{ site.embed-theme }}"/>
     <meta name="description" content="{{ page.excerpt | default: site.description }}">
     <meta name="keywords" content="{{ page.keywords | default: site.keywords }}">
-    <meta name="author" content="{{ page.author | default: site.author}}">
+    <meta name="author" content="{{ page.author | default: site.owner }}">
     
     <link rel="shortcut icon" href="{{ site.icon }}"/>
     
@@ -87,7 +87,7 @@
     
     <footer class="footer">
         <div class="footer-wrapper">
-            &copy;{{ site.author }} {{ "now" | date: "%Y" }} &nbsp; | &nbsp; {{ site.title | default: "Flyhigh theme" }} &nbsp; | &nbsp; <a href="https://github.com/monotiller/flyhigh" target="_blank">Theme</a> made with <span class="material-icons" style="transform: translate(0, 6px);">favorite_border</span> by <a href="https://github.com/Ahhhh-man" target="_blank">Ahhhh-man</a> & <a href="https://github.com/monotiller" target="_blank">monotiller</a>
+            &copy;{{ site.owner }} {{ "now" | date: "%Y" }} &nbsp; | &nbsp; {{ site.title | default: "Flyhigh theme" }} &nbsp; | &nbsp; <a href="https://github.com/monotiller/flyhigh" target="_blank">Theme</a> made with <span class="material-icons" style="transform: translate(0, 6px);">favorite_border</span> by <a href="https://github.com/Ahhhh-man" target="_blank">Ahhhh-man</a> & <a href="https://github.com/monotiller" target="_blank">monotiller</a>
         </footer>
     </div>
     
