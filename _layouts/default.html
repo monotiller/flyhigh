@@ -32,7 +32,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Kanit" rel="stylesheet">
     <style>
         body{
-            background: url("{{ page.background-image | realtive_url | default: site.background-image }}") no-repeat center center fixed;
+            background: url("{{ page.background-image | relative_url | default: site.background-image }}") no-repeat center center fixed;
             /* This particular customisation element must go here since jekyll does not support liquid tags in CSS natively */
             -webkit-background-size: cover;
             -moz-background-size: cover;
@@ -47,7 +47,7 @@
         <div class="m-nav-sub m-nav-t">
             <div class="m-nav-t_wrap">
                 <div class="m-nav-title">
-                    {{ site.logo | realtive_url | default: site.title }}
+                    {{ site.logo | relative_url | default: site.title }}
                 </div>
             </div>
         </div> 
@@ -59,7 +59,7 @@
                     
                     <div id="m-nav-sub-title" class="target">
                         <div class="div">
-                            <a href="/" id="sTitleA">{{ site.title | realtive_url | default: "Flyhigh theme" }}</a>
+                            <a href="/" id="sTitleA">{{ site.title | relative_url | default: "Flyhigh theme" }}</a>
                         </div>
                     </div>
                     
@@ -68,7 +68,7 @@
                     
                     <div class="qwerty">
                         {% for item in site.data.navigation %}
-                        <li class="target"><a href="{{ item.url | realtive_url }}"><span class="material-icons m_icon">{{ item.icon }}</span>{{ item.title }}</a></li>
+                        <li class="target"><a href="{{ item.url | relative_url }}"><span class="material-icons m_icon">{{ item.icon }}</span>{{ item.title }}</a></li>
                         {% endfor %}
                     </div>
                     
