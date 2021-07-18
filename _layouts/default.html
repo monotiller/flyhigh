@@ -59,7 +59,7 @@
                     
                     <div id="m-nav-sub-title" class="target">
                         <div class="div">
-                            <a href="/" id="sTitleA">{{ site.title | relative_url | default: "Flyhigh theme" }}</a>
+                            <a href="{{ '/' | relative_url }}" id="sTitleA">{{ site.logo | relative_url | default: site.title }}</a>
                         </div>
                     </div>
                     
