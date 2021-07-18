@@ -6,7 +6,7 @@ keywords: "Jekyll, Theme" # Comma separated keywords about the content of the si
 owner: "Ahhhh-man, monotiller" # Who is in charge of this site?
 lang: "en-GB" # The language of your site, defaults to en-GB (British English)
 embed-theme: "#ffcd05" # The colour that will be displayed in places such as embeds, provide as a hex value
-background-image: /assets/images/brand/default.jpg # Default image from here: https://unsplash.com/photos/1tb5N7Q97Sw
+background-image: "assets/images/brand/default.jpg" # Default image from here: https://unsplash.com/photos/1tb5N7Q97Sw
 
 # Help to extend the site functionality
 plugins:
