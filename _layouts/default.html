@@ -34,10 +34,6 @@
         body{
             background: url("{{ page.background-image | relative_url | default: site.background-image }}") no-repeat center center fixed;
             /* This particular customisation element must go here since jekyll does not support liquid tags in CSS natively */
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
         }
     </style>
 </head>

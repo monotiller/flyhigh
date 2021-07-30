@@ -12,6 +12,10 @@ body {
 	font-weight: normal;
 	position: relative;
 	min-height: 100vh;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 ol, ul, li {
 	margin: 0;
