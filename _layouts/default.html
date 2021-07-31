@@ -47,7 +47,11 @@
         <div class="m-nav-sub m-nav-t">
             <div class="m-nav-t_wrap">
                 <div class="m-nav-title">
-                    {{ site.logo | relative_url | default: site.title }}
+                    {% if site.header-logo != "" %}
+                        <img src="{{ site.header-logo | relative_url }}" alt="{{ site.title }} logo">
+                    {% else %}
+                        {{ site.title }}
+                    {% endif %}
                 </div>
             </div>
         </div> 
