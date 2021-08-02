@@ -23,9 +23,9 @@ webmaster_verifications:
 
 
 # Blog options
-permalink: '/:year/:month/:title.html' # Style of permalinks for blog posts
-paginate: 5 # How many 
-paginate_path: "/posts/page:num/"
+permalink: ':year/:month/:title.html' # Style of permalinks for blog posts
+paginate: 5 # How many posts per page
+paginate_path: "blog/page:num/" # How to lay out blog posts
 
 # Help to extend the site functionality
 plugins:
