@@ -47,11 +47,13 @@
         <div class="m-nav-sub m-nav-t">
             <div class="m-nav-t_wrap">
                 <div class="m-nav-title">
-                    {% if site.header-logo != "" %}
-                        <img src="{{ site.header-logo | relative_url }}" alt="{{ site.title }} logo">
-                    {% else %}
-                        {{ site.title }}
-                    {% endif %}
+                    <a href="{{ '/' | relative_url }}" id="sTitleA">
+                        {% if site.header-logo != "" %}
+                            <img src="{{ site.header-logo | relative_url }}" alt="{{ site.title }} logo">
+                        {% else %}
+                            {{ site.title }}
+                        {% endif %}
+                    </a>
                 </div>
             </div>
         </div> 
@@ -63,7 +65,13 @@
                     
                     <div id="m-nav-sub-title" class="target">
                         <div class="div">
-                            <a href="{{ '/' | relative_url }}" id="sTitleA">{{ site.logo | relative_url | default: site.title }}</a>
+                            <a href="{{ '/' | relative_url }}" id="sTitleA">
+                                {% if site.header-logo != "" %}
+                                    <img src="{{ site.header-logo | relative_url }}" alt="{{ site.title }} logo">
+                                {% else %}
+                                    {{ site.title }}
+                                {% endif %}
+                            </a>
                         </div>
                     </div>
                     
