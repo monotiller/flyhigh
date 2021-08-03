@@ -3,7 +3,7 @@ layout: default
 ---
 <style>
     body{
-        background: url("{{ page.background-image | relative_url | default: site.background-image }}") no-repeat center center fixed;
+        background: url("{{ page.background-image | relative_url | default: site.background-image| relative_url }}") no-repeat center center fixed;
         /* This particular customisation element must go here since jekyll does not support liquid tags in CSS natively */
         -webkit-background-size: cover;
         -moz-background-size: cover;
@@ -11,7 +11,9 @@ layout: default
         background-size: cover;
     }
 </style>
+
 <h1>{{ page.title }}</h1>
 <p>{{ page.date | date_to_string }} - <a href="/authors/{{ page.author }}">{{ page.author }}</a></p>
+{% avatar {{ page.author }} %} 
 
 {{ content }}
