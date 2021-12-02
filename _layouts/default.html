@@ -79,9 +79,18 @@
 
                     <div class="qwerty-right">
                         <div id="bot-nav-right">
-                            <li><a href="{{ item.url | relative_url }}"><i class="fa fa-facebook-f"></i></a></li>
-                            <li><a href="{{ item.url | relative_url }}"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="{{ item.url | relative_url }}"><i class="fa fa-github"></i></a></li>
+                            {% if site.facebook.publisher == blank %}
+                            {% else %}
+                                <li><a href="{{ site.facebook.publisher }}"><i class="fa fa-facebook-f"></i></a></li>
+                            {% endif %}
+                            {% if site.twitter.username == blank %}
+                            {% else %}
+                                <li><a href="https://twitter.com/{{ site.twitter.username }}"><i class="fa fa-twitter"></i></a></li>
+                            {% endif %}
+                            {% if site.github == blank %}
+                            {% else %}
+                                <li><a href="https://github.com/{{ site.github }}"><i class="fa fa-github"></i></a></li>
+                            {% endif %}
                         </div>
                     </div>
                     

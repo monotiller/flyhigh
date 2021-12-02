@@ -13,14 +13,21 @@ embed-theme: "#ffcd05" # The colour that will be displayed in places such as emb
 background-image: "assets/images/brand/default.jpg" # Default image from here: https://unsplash.com/photos/1tb5N7Q97Sw
 
 # SEO Tag settings - See here for full instructions: https://github.com/jekyll/jekyll-seo-tag
-#Social media
+# Social media
 twitter:
-  username: 
+  username: github
   card: summary
+facebook:
+  app_id: 
+  publisher: https://facebook.com/github
+  admins: 
 social:
   links:
+    # Styled like this: - https://example.com
 webmaster_verifications:
 
+# Additional social media that isn't supported by the SEO above:
+github: github # Just your username or user/repo
 
 # Blog options
 permalink: ':year/:month/:title.html' # Style of permalinks for blog posts

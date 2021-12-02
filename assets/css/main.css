@@ -34,15 +34,14 @@ hr {
 
 
 nav {
-	background-color: red;
+	/* background-color: red; */
 	width: 100%;
 	font-family: ubuntu;
 }
 /* -----------------------------------------TOP NAV-------------------------------------------*/
 
 #top-nav {
-	/* background-color: rgba(255, 255, 255, 0.3); */
-	background-color: blue;
+	background-color: rgba(255, 255, 255, 0.3);
 	-webkit-backdrop-filter: blur(50px);
 	backdrop-filter: blur(50px);
 }
@@ -56,7 +55,7 @@ nav {
 }
 #top-nav-title {
 	display: inline-block;
-	background-color: green;
+	/* background-color: green; */
 }
 #top-nav-title a {
 	/* -webkit-background-clip: text;
@@ -73,10 +72,10 @@ nav {
 /* -----------------------------------------BOT NAV-------------------------------------------*/
 #bot-nav { /* bot nav normal position */
 	width: 100%;
-	/* background-color: rgba(143, 142, 142, 0.15); */
-	background-color: orange;
-	/* -webkit-backdrop-filter: blur(50px);
-	backdrop-filter: blur(50px); */
+	background-color: rgba(143, 142, 142, 0.15);
+	/* background-color: orange; */
+	-webkit-backdrop-filter: blur(50px);
+	backdrop-filter: blur(50px);
 	z-index: 2;
 }
 #bot-nav.fixed { /* bot nav scrolled down */
@@ -86,14 +85,14 @@ nav {
 	background-color: rgba(0, 0, 0, 0.25);
 }
 #bot-nav-wrap {
-	background-color: purple;
+	/* background-color: purple; */
 	margin: 0 auto;
 	max-width: 1200px;
 	width: 100%;
 }
 
 #bot-nav-div-list {
-	background-color: hotpink;
+	/* background-color: hotpink; */
 	width: 100%;
 }
 
@@ -120,7 +119,7 @@ nav {
 	/* height: 60px; */
 	/* line-height: 60px; */
 	vertical-align: middle;
-	background-color: blue;
+	/* background-color: blue; */
 	
 }
 #bot-nav-title a {
@@ -187,7 +186,7 @@ nav {
 
 /* -- bot nav divs -- */
 #bot-nav-div-list {
-	background-color: blueviolet;
+	/* background-color: blueviolet; */
 }
 .qwerty {
 	display: inline-block;
@@ -204,7 +203,7 @@ nav {
 #bot-nav-right {
 	display: inline-block;
 	height: 50px;
-	background-color: aquamarine;
+	/* background-color: aquamarine; */
 }
 
 
@@ -223,13 +222,13 @@ nav {
 	padding: 0 15px;
 }
 #bot-nav-left li a .material-icons {
-	background-color: greenyellow;
+	/* background-color: greenyellow; */
 	vertical-align: middle;
 	margin-right: 8px;
 	margin-bottom: 4px;
 }
 #bot-nav-left li a:hover {
-	background-color: blue;
+	background-color: rgba(255, 255, 255, 0.5);
 }
 #bot-nav-left li:not(:last-child) a::after{
 	position: absolute;
@@ -244,7 +243,7 @@ nav {
 
 /* -- bot nav right child -- */
 #bot-nav-right li {
-	background-color: red;
+	/* background-color: red; */
 }
 #bot-nav-right li:not(:last-child) {
 	margin-right: 7px;
@@ -256,14 +255,6 @@ nav {
 	vertical-align: middle;
 }
 
-
-
-
-
-
-
-
-
 .content {
 	margin-top: 30px;
 }
@@ -274,13 +265,13 @@ nav {
 	margin: 0 auto;
 }
 .content-flask {
-	max-width: 1200px;
+	max-width: 1000px;
 	margin: 0 auto;
 	padding: 20px;
 	background-color: #fff;
-	-webkit-backdrop-filter: blur(50px);
-	backdrop-filter: blur(50px);
-	background-color: rgba(255, 255, 255, 0.6);
+	/* -webkit-backdrop-filter: blur(50px); */
+	/* backdrop-filter: blur(50px); */
+	/* background-color: rgba(255, 255, 255, 0.6); */
 	margin-bottom: 50px;
 	border-radius: 10px;
 }
@@ -303,24 +294,6 @@ nav {
 	margin-bottom: 25px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media only screen and (max-width:1200px) {
 	#menu {
 		display: inline-block;
@@ -341,7 +314,7 @@ nav {
 	}
 	
 	#bot-nav-div-list #bot-nav-left {
-		background-color: deepskyblue;
+		/* background-color: deepskyblue; */
 		margin: 0; /* remove -4px margin left */
 	}
 	#bot-nav-div-list #bot-nav-left li {
