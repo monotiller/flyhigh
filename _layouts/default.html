@@ -23,6 +23,7 @@
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
     
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
     <!--fonts.gooogle.com-->
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
@@ -43,10 +44,10 @@
 </head>
 <body>
     
-    <nav id="m-nav">
-        <div class="m-nav-sub m-nav-t">
-            <div class="m-nav-t_wrap">
-                <div class="m-nav-title">
+    <nav>
+        <div id="top-nav">
+            <div id="top-nav-wrap">
+                <div id="top-nav-title">
                     <a href="{{ '/' | relative_url }}" id="sTitleA">
                         {% if site.header-logo != "" %}
                             <img src="{{ site.header-logo | relative_url }}" alt="{{ site.title }} logo">
@@ -58,14 +59,12 @@
             </div>
         </div> 
         
-        <div class="m-nav-sub m-nav-b" id="m-nav-b">
-            <div class="m-nav-b_wrap">
-                
-                <ul class="target">
-                    
-                    <div id="m-nav-sub-title" class="target">
+        <div id="bot-nav">
+            <div id="bot-nav-wrap">
+                <div id="bot-nav-div-list">
+                    <div id="bot-nav-title">
                         <div class="div">
-                            <a href="{{ '/' | relative_url }}" id="sTitleA">
+                            <a href="{{ '/' | relative_url }}" id="bot-nav-title-a">
                                 {% if site.header-logo != "" %}
                                     <img src="{{ site.header-logo | relative_url }}" alt="{{ site.title }} logo">
                                 {% else %}
@@ -74,17 +73,41 @@
                             </a>
                         </div>
                     </div>
+
                     
-                    
-                    <div class="menu" id="menu"><i class="material-icons miii">menu</i>Menu</div>
-                    
-                    <div class="qwerty">
-                        {% for item in site.data.navigation %}
-                        <li class="target"><a href="{{ item.url | relative_url }}"><span class="material-icons m_icon">{{ item.icon }}</span>{{ item.title }}</a></li>
-                        {% endfor %}
+                    <div id="social"><i class="material-icons">tag</i></div>
+
+                    <div class="qwerty-right">
+                        <div id="bot-nav-right">
+                            {% if site.facebook.publisher == blank %}
+                            {% else %}
+                                <li><a href="{{ site.facebook.publisher }}"><i class="fa fa-facebook-f"></i></a></li>
+                            {% endif %}
+                            {% if site.twitter.username == blank %}
+                            {% else %}
+                                <li><a href="https://twitter.com/{{ site.twitter.username }}"><i class="fa fa-twitter"></i></a></li>
+                            {% endif %}
+                            {% if site.github == blank %}
+                            {% else %}
+                                <li><a href="https://github.com/{{ site.github }}"><i class="fa fa-github"></i></a></li>
+                            {% endif %}
+                        </div>
                     </div>
                     
-                    <script>$( "#menu" ).click(function() {$(".qwerty").toggleClass("open");});</script>
+                    <div id="menu"><i class="material-icons">menu</i>Menu</div>
+                    
+                    <div class="qwerty">
+                        <div id="bot-nav-left">
+                            {% for item in site.data.navigation %}
+                            <li><a href="{{ item.url | relative_url }}"><span class="material-icons">{{ item.icon }}</span>{{ item.title }}</a></li>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    
+                    <script>
+                        $( "#menu" ).click(function() {$(".qwerty").toggleClass("open");});
+                        $( "#social" ).click(function() {$(".qwerty-right").toggleClass("open");});
+                    </script>
                 </ul>
             </div>
         </div>         
@@ -94,6 +117,7 @@
     <div class="content">
         <div class="content-flask">
             {{ content }}
+            <div style="padding-bottom: 1000px;"></div>
         </div>
     </div>
     
@@ -114,28 +138,23 @@
         window.onscroll = changePos;
         
         function changePos() {
-            var header = document.getElementById("m-nav-b");
-            var sTitle = document.getElementById("m-nav-sub-title");
-            var sTitleA = document.getElementById("sTitleA");
+            var header = document.getElementById("bot-nav");
+            var sTitle = document.getElementById("bot-nav-title");
+            var sTitleA = document.getElementById("bot-nav-title-a");
             var menu = document.getElementById("menu");
             
             if (window.pageYOffset > 80) {
-                header.style.position = "fixed";
-                header.style.top = "0";
-                header.style.fontSize = "13px";
-                header.style.background = "rgba(0, 0, 0, 0.25)";
-                menu.style.fontSize = "15px";
+                header.classList.add("fixed");
+                menu.classList.add("fixed");
                 
-                sTitle.style.width = "220px";
+                sTitle.style.width = "200px";
                 sTitle.style.paddingRight = "8px";
                 sTitleA.style.color = "#fff";
-                sTitle.style.marginLeft = "10px";
+                // sTitle.style.marginLeft = "10px";
                 
             } else {
-                header.style.position = "";
-                header.style.top = "";
-                header.style.fontSize = "";
-                header.style.background = "";
+                header.classList.remove("fixed");
+                menu.classList.remove("fixed");
                 
                 sTitle.style.width = "";
                 sTitle.style.paddingRight = "0px";
@@ -143,6 +162,15 @@
                 sTitleA.style.color = "";
             }
         }
+
+
+
+        $(window).scroll(function() {    
+            var scroll = $(window).scrollTop();
+            if (scroll >= 1) {
+                $(".qwerty").removeClass("open");
+            }
+        });
     </script>
 </body>
 </html>
