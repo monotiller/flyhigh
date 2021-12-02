@@ -166,7 +166,7 @@ nav {
 #social {
 	display: none;
 	height: 50px;
-	background-color: navajowhite;
+	/* background-color: navajowhite; */
 	font-weight: 500;
 	cursor: pointer;
 	-webkit-touch-callout: none; /* iOS Safari */
@@ -297,11 +297,11 @@ nav {
 @media only screen and (max-width:1200px) {
 	#menu {
 		display: inline-block;
-		background-color: hotpink;
+		/* background-color: hotpink; */
 	}	
 	#social {
 		display: inline-block;
-		background-color: hotpink;
+		/* background-color: hotpink; */
 	}
 	#top-nav-wrap {
 		margin-left: 15px;
