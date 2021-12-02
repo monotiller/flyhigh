@@ -34,6 +34,28 @@ permalink: ':year/:month/:title.html' # Style of permalinks for blog posts
 paginate: 5 # How many posts per page
 paginate_path: "blog/page:num/" # How to lay out blog posts
 
+# Collections configuration helps to organise things such as blog posts
+collections:
+  authors:
+    output: true
+
+# Setting up defaults
+defaults:
+  - scope:
+      path: ""
+      type: "authors"
+    values:
+      layout: "author"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
 # Help to extend the site functionality
 plugins:
   # Required plugins

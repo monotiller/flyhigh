@@ -33,7 +33,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Kanit" rel="stylesheet">
     <style>
         body{
-            background: url("{{ page.background-image | relative_url | default: site.background-image }}") no-repeat center center fixed;
+            background: url("{{ page.background-image | relative_url | default: site.background-image | relative_url }}") no-repeat center center fixed;
             /* This particular customisation element must go here since jekyll does not support liquid tags in CSS natively */
             -webkit-background-size: cover;
             -moz-background-size: cover;
